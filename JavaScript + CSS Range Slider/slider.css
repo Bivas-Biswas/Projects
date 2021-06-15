@@ -23,7 +23,7 @@ p{
 }
 
 .slider::after{
-    content: '200';
+    content: '50';
     color: white;
     font-size: 2rem;
     position: absolute;
@@ -32,7 +32,7 @@ p{
 }
 
 .slider::before{
-    content: '0';
+    content: '-50';
     color: white;
     font-size: 2rem;
     position: absolute;

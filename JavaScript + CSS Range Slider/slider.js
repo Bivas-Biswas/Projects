@@ -1,13 +1,16 @@
 const slider = document.querySelector('#myrange')
 const output = document.querySelector('#value')
 
+console.log(slider.getAttribute('max'))
+
 // udate the value according to the slider value
 output.innerHTML = slider.value
 
 // check slider value is greater than 0
 // change the css background color
-if (slider.value > 0 || slider.value < 0 ){
-    const color = 'linear-gradient(90deg, rgb(117, 252, 117)' + Math.abs(slider.value/2) + '%, rgb(214,214,214)' + Math.abs(slider.value/2) + '%)'
+if (slider.value !== 0){
+    const y = (parseInt(slider.value)+parseInt(slider.getAttribute('max')))
+    const color = 'linear-gradient(90deg, rgb(117, 252, 117)' + y + '%, rgb(214,214,214)' + y + '%)'
     slider.style.background = color
     console.log(color)
 }
@@ -19,8 +22,8 @@ slider.oninput = function (){
 
 // update the slider background value, according to the slider thumb position
 slider.addEventListener('input', function (){
-    const x = slider.value
-    const color = 'linear-gradient(90deg, rgb(117, 252, 117)' + x/2 + '%, rgb(214,214,214)' + x/2 + '%)'
+    const y = (parseInt(slider.value)+parseInt(slider.getAttribute('max')))
+    const color = 'linear-gradient(90deg, rgb(117, 252, 117)' + y + '%, rgb(214,214,214)' + y + '%)'
     slider.style.background = color
-    // console.log(color)
+    console.log(color)
 })
