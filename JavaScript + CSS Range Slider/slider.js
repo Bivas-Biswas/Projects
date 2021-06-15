@@ -25,5 +25,5 @@ slider.addEventListener('input', function (){
     const y = (parseInt(slider.value)+parseInt(slider.getAttribute('max')))
     const color = 'linear-gradient(90deg, rgb(117, 252, 117)' + y + '%, rgb(214,214,214)' + y + '%)'
     slider.style.background = color
-    console.log(color)
+    // console.log(color)
 })
