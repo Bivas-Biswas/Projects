@@ -1,8 +1,6 @@
 const slider = document.querySelector('#myrange')
 const output = document.querySelector('#value')
 
-console.log(slider.getAttribute('max'))
-
 // udate the value according to the slider value
 output.innerHTML = slider.value
 
